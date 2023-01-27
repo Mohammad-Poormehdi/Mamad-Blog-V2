@@ -1,0 +1,29 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- <link rel="stylesheet" href="{% static 'post/styles/style.css' %}"> -->
+    <title>{% block title %}{% endblock %}</title>
+</head>
+<body class="bg-slate-300">
+    <!-- navbar -->
+    <nav class="bg-white p-4">
+        <!-- navbar contaier -->
+        <div class="container flex justify-between items-center mx-auto">
+            <!-- logo -->
+            <h1 class="text-2xl font-bold">Mamad Blog v.2</h1>
+            <!-- menu -->
+            <ul class="flex space-x-4">
+                <li><a href="">posts</a></li>
+                <li><a href="">About Us</a></li>
+                <li><a href="">Contact Us</a></li>
+            </ul>
+        </div>
+    </nav>
+    {% block content %}
+    {% endblock %}
+</body>
+</html>

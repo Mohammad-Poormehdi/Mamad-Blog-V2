@@ -1,0 +1,11 @@
+{% extends "post/base.html" %}
+{% block title %}Mamad Blog v.2{% endblock %}
+
+{% block content %}
+<!-- global container -->
+<div class="container mx-auto p-5 grid gap-4 grid-cols-3 max-md:grid-cols-1">
+    {% for post in posts %}
+        {% include 'post/post_card.html' with title=post.title content=post.content %}
+    {% endfor %}
+</div>
+{% endblock %}
